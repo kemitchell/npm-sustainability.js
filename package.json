@@ -1,7 +1,7 @@
 {
   "name": "npm-sustainability",
   "description": "collect sustainability data for your npm dependencies",
-  "version": "0.0.0",
+  "version": "1.0.0-beta.1",
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)",
   "license": "MIT",
   "repository": "kemitchell/npm-sustainability.js",
