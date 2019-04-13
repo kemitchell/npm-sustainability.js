@@ -5,6 +5,7 @@
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)",
   "license": "MIT",
   "repository": "kemitchell/npm-sustainability.js",
+  "sustainability": "https://raw.githubusercontent.com/kemitchell/npm-sustainability.js/master/sustainability.json",
   "bin": "bin.js",
   "files": [
     "README.md",
