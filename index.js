@@ -1,4 +1,5 @@
 var getSustainability = require('get-sustainability')
+var has = require('has')
 var parseJSON = require('json-parse-errback')
 var readPackageTree = require('read-package-tree')
 var runParallel = require('run-parallel')
@@ -79,7 +80,7 @@ module.exports = function (configuration, path, callback) {
       } else {
         parseJSON(json, function (error, graph) {
           if (error) return done(error)
-          if (!graph.hasOwnProperty('dependencies')) {
+          if (!has(graph, 'dependencies')) {
             done(new Error('cannot interpret npm ls --json output'))
           } else {
             var flattened = {}
@@ -107,14 +108,14 @@ function flattenDependencyTree (graph, object) {
     var version = node.version
     var key = KEY_PREFIX + name
     if (
-      object.hasOwnProperty(key) &&
+      has(object, key) &&
       object[key].indexOf(version) === -1
     ) {
       object[key].push(version)
     } else {
       object[key] = [version]
     }
-    if (node.hasOwnProperty('dependencies')) {
+    if (has(node, 'dependencies')) {
       flattenDependencyTree(node.dependencies, object)
     }
   })
@@ -143,7 +144,7 @@ function appearsIn (installed, dependencies) {
   var key = KEY_PREFIX + name
   var version = installed.package.version
   return (
-    dependencies.hasOwnProperty(key) &&
+    has(dependencies, key) &&
     dependencies[key].indexOf(version) !== -1
   )
 }
