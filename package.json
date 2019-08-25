@@ -23,7 +23,7 @@
     "run-parallel": "^1.1.9",
     "run-series": "^1.1.8",
     "simple-concat": "^1.0.0",
-    "sustainability-schema": "github:kemitchell/sustainability-schema.json"
+    "sustainability-schema": "^1.1.0"
   },
   "devDependencies": {
     "spawn-sync": "^2.0.0",
