@@ -744,8 +744,9 @@
       "dev": true
     },
     "get-sustainability": {
-      "version": "github:kemitchell/get-sustainability.js#f297489a598472d7e8ab95f58049cf92a8e8bc03",
-      "from": "github:kemitchell/get-sustainability.js",
+      "version": "1.0.0",
+      "resolved": "https://registry.npmjs.org/get-sustainability/-/get-sustainability-1.0.0.tgz",
+      "integrity": "sha512-2nf4SP2gPTXvfJkBgQNiDhvqUA5u9yZtf7SWR0TQGOA4Jx99nhMIecFJjXfVT1Mg/ZNda4p9uR72DvK1MqZdAA==",
       "requires": {
         "run-parallel-limit": "^1.0.5",
         "sustainability-schema": "^1.0.0",
